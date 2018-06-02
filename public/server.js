@@ -6,7 +6,7 @@ var express = require('express');
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
 
-    var pusher = new Pusher({ appId: '536008', key: '9e1488d40e6397078fdf', secret:  '89745da8d3449cd99764', cluster: us2 });
+    var pusher = new Pusher({ appId: '536008', key: '9e1488d40e6397078fdf', secret:  '89745da8d3449cd99764', cluster: "us2" });
 
     app.post('/pusher/auth', function(req, res) {
       var socketId = req.body.socket_id;
